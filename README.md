@@ -4,7 +4,7 @@ Hello BCBLians R-code padawans. All materials here are the ones we are going to 
 
 The idea is that after this crash course we have the required R notions to become a **R Jedi-Master**. This Repo is full of memes and jokes, *padawan discretion is adviced*
 
-![Your R jedi path](./R_meme_0.jpg)
+![Your R jedi path](https://github.com/marco7877/BCBL-Pupillometry-Workshop/blob/main/R_meme0.jpg)
 
 **Let's start our jedi track**
 
