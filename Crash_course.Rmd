@@ -5,6 +5,7 @@ date: "2024-05-23"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +24,7 @@ Let's start our R Jedi path.
 ### There is no death, there is autosave
 
 
-![This is you](./padawan.jpg)
+![Breath in, R code](./padawan.jpg)
 
 
 # Anyway what are R and R-studio?
@@ -38,7 +39,7 @@ You can do almost anything with it, thus it is specially know for
 So, R is a high order programming language. That means its the language where we
 humans can tell the computer what to do, while using human-like syntax and words
 (i.e., *for*, *if*, *while*, ...) instead of computer's binary language (i.e.,
-01000010 01000011 01000010 01001100)
+01001101 01100001 01111001 00100000 01110100 01101000 01100101 00100000 01100110 01101111 01110010 01100011 01100101 00100000 01100010 01100101 00100000 01110111 01101001 01110100 01101000 00100000 01111001 01101111 01110101 00100001)
 
 - **Wait a moment! So we don't program in R-studio?**
 - **Yes, but actually no**
@@ -59,9 +60,9 @@ because:
 # R as a calculator
 
 Now that we are starting to use R. So, first you can know that R can be used like
-a really powerful calculator that in the future will help us from writting/solving
-by hand bothering ANOVA's or Linear models (i.e., Linear regressión, multiple regression,
-Linear Mived models)
+a really powerful calculator that in the future will help us from writing/solving
+by hand bothering ANOVAs or Linear models (i.e., Linear regression, multiple regression,
+Linear Mixed models)
 
 ## Sum
 ```{r}
@@ -92,8 +93,9 @@ Linear Mived models)
 ```{r}
 2 ** 3
 ```
-## scary things
+## Scary things
 
+*Remember: PEMDAS (parenthesis, exponents, multiplication, division, addition, subtraction)*
 ```{r}
 (2024 * 360) + (2024 / 4)
 
@@ -113,7 +115,7 @@ It may be the case that you want to infuze with your MP some objects. For exampl
 you  infuze a sheet with the word *HEAL* with *healing* . 
 
 In this case the variable named *HEAL* contains the magic *healing*. You can 
-name your sheets of papers however you can, thus it is always usefull to have 
+name your sheets of papers however you can, thus it is always useful to have 
 names that remember you what they contain. You only have one restriction, yo can
 not use the exactly variable word twice or it may be overwritten.
 
@@ -145,7 +147,7 @@ variable we use a dot to separate them. Also, we use the symbol *<-* intead of =
 
 We have already defined some variables with different data types. Do yo know which type?
 If you are like me and have the memory power of Dory from finding Nemo, you will
-explore wich data type you are working with. Luckily R developers have us covered
+explore which data type you are working with. Luckily R developers have us covered
 
 ```{r}
 class(my.number) # I'm asking the class of whats inside the variable my.number
@@ -159,7 +161,7 @@ my.factor = as.factor("level")
 class(my.factor)
 ```
 
-During your statistical jedi trip, you will encounter this type of elements most
+During your statistical Jedi trip, you will encounter this type of elements most
 of the time. numeric and characters are kinda self-explanatory, but 
 
 - **What is a factor?** 
@@ -168,37 +170,40 @@ of the time. numeric and characters are kinda self-explanatory, but
 
 Factors are this really weird R class type that helps us to differentiate between
 element types. Imagine you have a scroll with the names of all the elves and 
-orcs living as friends inside a village (*It's my example, and I want them to be friends*.
+orcs living as friends inside a village (*It's my example, and I want them to be friends*).
 
 ![Happy village scroll](./scroll.jpg)
 
-Ok, then in your scroll you have their names and their specie. In this example
+OK, then in your scroll you have their names and their specie. In this example
 Specie would be a factor class. This is because its not a value that we can change 
 (sorta). An elf is an elf, despite of it's height, hair or being played by Orlando 
 Bloom. 
 
+
+![What about a friend](./Rfactor.jpg)
+
 ## Data structures
 
-Me fellow padawan, I sense the R force is strong in you! You may be asking, 
+My fellow padawan, I sense the R force is strong in you! You may be asking, 
 "Ha, but what if I want many elements inside a variable?" We are going places here! 
 
-Ok, this kinf os **structures** that hold data are called *data structures*. We 
+OK, this kind of **structures** that hold data are called *data structures*. We 
 have one great distinction, we may want structures containing the same data class
 or structures with different ones. 
 
 Imagine now you want to store a lot of *healing* spells against fire, PhD burn-out,
-hangover and fantasy stuff like that (blink blink. We'll then you would use a stone
-that can store toons of healing spells (*homogeneous* if you want to sound nerdy).
+hangover and fantasy stuff like that (blink blink). We'll then you would use a stone
+that can store tons of healing spells (*homogeneous* if you want to sound nerdy).
 
-If you want, instead, to store different type of spells like *healing*, *explotion*, and
-*light*, because you want an elvish swiss-army-spellRock . Well, then you are looking
-for a rock that can hold different  spell types at the same time (*heterogeneous*.
+If you want, instead, to store different type of spells like *healing*, *explosion*, and
+*light*, because you want an elvish swiss-army-spell-rock . Well, then you are looking
+for a rock that can hold different  spell types at the same time (*heterogeneous*).
 
 ### Homogeneous data type
 
 #### vector
 
-Vectors are 1 dimentional data structures (**1D**). Think of it like a row or things
+Vectors are 1 dimensional data structures (**1D**). Think of it like a row or things
 
 ```{r}
 my.numbervector <- c(1,2,3,4,5)
@@ -215,7 +220,7 @@ my.vector=c(1,"2")
 
 #### Matrix
 
-Matrix further than being a matrix, they can be seen as several vectors tied together.
+Matrix further than being a matrix, they can be seen as several vectors tied together. This structure is bi-dimensional (**2D**).
 Kinda like if you make a boat by gluing wood logs. Thus, **every vector has to have the same length**
 
 ```{r}
@@ -225,8 +230,8 @@ my.logmatrix <- rbind(first.log,second.log)
 
 ```
 
-cool right! *There'r another multidimentional homogeneous data.structure called
-table or array, but we are not going to speak about these #sorry!
+cool right! *There'r another multidimentional homogeneous data structure called
+table or array (**n-dimensional**), but we are not going to speak about these #sorry!
 
 ### Heterogeneous data type
 
@@ -245,20 +250,100 @@ print(my.spellrock.list[1])
 print(my.spellrock.list$explosion)
 ```
 We did a lot here! As you can see, we can store different kind of class types 
-inside our list. How cool is that (well, not so much TBH, but its useful.
+inside our list. How cool is that (well, not so much TBH, but its useful).
 
-#### Matrix
+![Explosion!](./Rlist.jpg)
 
-Matrix further than being a matrix, they can be seen as several vectors tied together.
-Kinda like if you make a boat by gluing wood logs. Thus, **every vector has to have the same length**
+#### Data Frame/ Tibble
+
+This is where the fun begins! Data frames are structures (**2D**) where you can store different data types. This structures are characterized for having *rows* and *columns*. You know just like what? *Like Excel spread sheets!*. My padawan, this is the structure that you are going to use the most within the Data Wars against Null hypothesis. This kind of structure let us access to complete rows, complete columns, a range given rows and columns and specific locations. 
+
+The mystery of the R force sounds complicated. Let me show you. To understand this, imagine DataFrames to be as a Naval Battle board. 
 
 ```{r}
-first.log <- c("a","b","c","d")
-second.log <- c("1","2","3","4")
-my.logmatrix <- rbind(first.log,second.log)
+a.column <- c(NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"SH")
+b.column <- c(NaN,NaN,"S",NaN,NaN,NaN,NaN,NaN,NaN,"IP")
+c.column <- c(NaN,NaN,"H",NaN,NaN,"S","H","I","P",NaN)
+d.column <- c(NaN,NaN,"I",NaN,NaN,NaN,NaN,NaN,NaN,NaN)
+e.column <- c(NaN,NaN,"I",NaN,NaN,NaN,"SHIP",NaN,NaN,NaN)
+f.column <- c(NaN,NaN,"P",NaN,NaN,NaN,NaN,NaN,NaN,NaN)
+board.game.df <- data.frame(a.column,b.column,c.column,d.column,e.column,
+                            f.column)
+print(board.game.df)
+```
+
+Wuhuu! Now lets play
+
+```{r}
+print(board.game.df[1,])#we can select the first row
+
+print(board.game.df[,1])#we can select the first column
+# like this
+print(board.game.df["a.column"])
+# or this
+print(board.game.df$a.column)
+
+print(board.game.df[3,2:6])# we can select a subselection
+
+print(board.game.df[7,5])# we can select one single element
 
 ```
 
-cool right! *There'r another multidimentional homogeneous data.structure called
-table or array, but we are not going to speak about these #sorry!
+## Functions
+
+If you are a lazy Jedi like myself, you would not like to be typing and typing.
+sometimes there are calls within R than can be a program (*function*). We have 
+already used some of these before: print(), data.frame(), rbind() !
+
+Let's create one to play after our training!
+
+```{r}
+naval.turn <- function(dataFrame,y,x){
+  if (dataFrame[y,x] != NaN)  #if whats inside my cell is different from NaN
+    {print (dataFrame[y,x])# print whats inside
+    print("Boom!")#change content to Boom!
+    return(NaN)} # nothing left
+
+  else #if what is inside is a NaN
+    {print("Ups, you failed")}#arise this print
+}
+```
+
+
+The force is really strong in you! For our function we used some English
+words. the same syntax we used in *if* and *else* can be used in *for* and *while*
+. see below
+
+```{r}
+#for syntax= for (element in elementcontainer){do condition}
+for (column in board.game.df) {
+  print("running this step")
+  print(column)
+print("changing step")
+}
+```
+
+
+```{r}
+i=0
+  while (i<10) {
+    print(i)
+    print("while loop goes BbBrR")
+    i=i+1
+  }
+print("while loop stops")
+```
+
+
+
+
+
+### GAME! turn everything inside board.game.df to NaNs
+
+```{r}
+#hint
+board.game.df[7,5] <- naval.turn(board.game.df,7,5)
+```
+
+
 
