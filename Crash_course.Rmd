@@ -29,7 +29,7 @@ Let's start our R Jedi path.
 
 ### There is no death, there is autosave
 
-![Breath in, R code](./padawan.jpg)
+![Breath in, R code](./img/padawan.jpg)
 
 # Anyway what are R and R-studio?
 
@@ -187,14 +187,14 @@ differentiate between element types. Imagine you have a scroll with the
 names of all the elves and orcs living as friends inside a village
 (*It's my example, and I want them to be friends*).
 
-![Happy village scroll](./scroll.jpg)
+![Happy village scroll](./img/scroll.jpg)
 
 OK, then in your scroll you have their names and their specie. In this
 example Specie would be a factor class. This is because its not a value
 that we can change (sorta). An elf is an elf, despite of it's height,
 hair or being played by Orlando Bloom.
 
-![What about a friend](./Rfactor.jpg)
+![What about a friend](./img/Rfactor.jpg)
 
 ------------------------------------------------------------------------
 
@@ -277,7 +277,7 @@ We did a lot here! As you can see, we can store different kind of class
 types inside our list. How cool is that (well, not so much TBH, but its
 useful).
 
-![Explosion!](./Rlist.jpg)
+![Explosion!](./img/Rlist.jpg)
 
 #### Data Frame/ Tibble
 
@@ -378,7 +378,7 @@ board.game.df[7,5] <- naval.turn(board.game.df,7,5)
 
 ## Libraries
 
-![install.packages()](./coding.jpg)
+![install.packages()](./img/coding.jpg)
 
 R is a programming language used by tons of people. As so, most of the
 times (*almost always*) we do not need to reinvent the wheel, because
@@ -445,14 +445,14 @@ in linux and MacOS it may star with **~** or **home**.
 Moreover, make sure that you use the correct slash */* to determine the path 
 -Yes, I'm talking about you Windows users-.
 
-![dark side of the path](./Paths.jpg)
+![dark side of the path](./img/Paths.jpg)
 
 
 ```{r,}
 #read a csv with readr::read_csv()
-csv.file <- read_csv("~/Documents/BCBL-Pupillometry-Workshop/Exercise.csv")
+csv.file <- read_csv("data/Exercise.csv")
 #read an excel with readxl::read_xlsx
-excel.file <- readxl::read_xlsx("~/Documents/BCBL-Pupillometry-Workshop/Exercise_excel.xlsx")
+excel.file <- readxl::read_xlsx("data/Exercise_excel.xlsx")
 
 ```
 
@@ -465,14 +465,14 @@ un-natural. **cool plots**
 
 ### GGplot
 
-![I'm one with the force, the force is with me](./Rplots.jpg)
+![I'm one with the force, the force is with me](./img/Rplots.jpg)
 
 GGplot is going to be your best friend! 
 
 GGplot works kinda like photoshop or gimp. You have several layers that you can
 edit and overlap to make pretty cool plots.
 
-![ggplot layers](./ggplot_overview.png)
+![ggplot layers](./img/ggplot_overview.png)
 
 GGplot intro: https://ggplot2.tidyverse.org/articles/ggplot2.html
 GGplot cheatsheet: https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
@@ -515,7 +515,7 @@ ggplot(csv.file, aes(x=x, y=y, shape=dataset, color=dataset)) +# use ggplot over
 # Exercise
 
 
-Now its your turn! Your goal is to open the file numeric_peekaboo.csv, make a 
+Now its your turn! Your goal is to open the file **numeric_peekaboo.csv**, make a 
 plot for each label and replace the label with the correct name of the image shown
 
 ```{r}
