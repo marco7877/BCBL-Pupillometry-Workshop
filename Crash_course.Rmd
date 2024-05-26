@@ -496,10 +496,10 @@ ggplot(csv.file, aes(x=x, y=y, shape=dataset, color=dataset)) +# use ggplot over
   theme(#theme is an amazing function that lets us make pretty our plots!
   panel.background = element_rect(fill = "white",#white background
   colour = "gray",#plot outline
-  size = 0.5, linetype = "solid"),#how is the aspect of the outline, try "dotted"
-  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+  linewidth = 0.5, linetype = "solid"),#how is the aspect of the outline, try "dotted"
+  panel.grid.major = element_line(linewidth  = 0.5, linetype = 'solid',
   colour = "white"),
-  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+  panel.grid.minor = element_line(linewidth = 0.25, linetype = 'solid',
   colour = "white"),
   #We can also change the font, sie ans aspect
   plot.title    = element_text(family = "AppleGothic"),
@@ -511,9 +511,16 @@ ggplot(csv.file, aes(x=x, y=y, shape=dataset, color=dataset)) +# use ggplot over
 ```
 
 ------------------------------------------------------------------------
-#Excercise
+
+# Exercise
+
+
 Now its your turn! Your goal is to open the file numeric_peekaboo.csv, make a 
 plot for each label and replace the label with the correct name of the image shown
+
+```{r}
+#your amazing code and plots go here
+```
 
 
 ------------------------------------------------------------------------
