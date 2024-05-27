@@ -34,13 +34,13 @@ Let's start our R Jedi path.
 # Anyway what are R and R-studio?
 
 Long story short, R is a programming language developed with a special
-affinity for statistical purposes. R is open source and multi-platform
+affinity for statistical purposes. R is open source and cross-platform
 (e.g., works for Linux, Mac-OS, and Windows).
 
 You can do almost anything with it, thus it is specially know for **cool
 pretty plots** after doing **amazing stats**!
 
-So, R is a high order programming language. That means its the language
+So, R is a high order programming language. That means it's the language
 where we humans can tell the computer what to do, while using human-like
 syntax and words (i.e., *for*, *if*, *while*, ...) instead of computer's
 binary language (i.e., 01001101 01100001 01111001 00100000 01110100
@@ -52,9 +52,9 @@ binary language (i.e., 01001101 01100001 01111001 00100000 01110100
 -   **Yes, but actually no**
 
 R is a programming language that translates some plain files (e.g., .R,
-.txt, .csv) where we write with commands for it. RStudio, in turn, is a
-nice Graphical User Interface (GUI) that is way way more informative
-than looking at plain files because:
+.txt, .csv) where we write commands for it to tell them to our computer.
+RStudio, in turn, is a nice Graphical User Interface (GUI) that is way way more 
+informative than looking at plain files because:
 
 1- You can load several plain text files
 
@@ -67,8 +67,8 @@ than looking at plain files because:
 # R as a calculator
 
 Now that we are starting to use R. So, first you can know that R can be
-used like a really powerful calculator that in the future will help us
-from writing/solving by hand bothering ANOVAs or Linear models (i.e.,
+used like a really powerful calculator that in the future will help us to
+write/solve otherwise bothering ANOVAs or Linear models (i.e.,
 Linear regression, multiple regression, Linear Mixed models)
 
 ## Sum
@@ -103,8 +103,8 @@ Linear regression, multiple regression, Linear Mixed models)
 
 ## Scary things
 
-*Remember: PEMDAS (parenthesis, exponents, multiplication, division,
-addition, subtraction)*
+*Remember: PEMDAS (Parenthesis, Exponents, Multiplication, Division,
+Addition, Subtraction)*
 
 ```{r}
 (2024 * 360) + (2024 / 4)
@@ -112,28 +112,31 @@ addition, subtraction)*
 ```
 
 Wow! look at us, using our powerful machine to do some maths. This may
-be trivial, but while your coding experience, you are going to use
-operations like the aforementioned, thus with **variables**
+seem trivial, but during your coding experience, you are going to use
+operations like the aforementioned, thus with **variables** -*trembles*-.
 
 # Variables
 
-A variable is a data item. Imagine you are an elf with n amount of
-magical points. It may be the case that you want to infuze with your MP
-some objects. For example, you infuze a sheet with the word *HEAL* with
-*healing* .
+A variable is a data item. Imagine you are an elf with *n* amount of
+magical points. It may be the case that you want to infuse with your MP
+some objects. For example, you infuse a sheet with the word *HEAL* with
+*healing* magic.
 
 In this case the variable named *HEAL* contains the magic *healing*. You
 can name your sheets of papers however you can, thus it is always useful
 to have names that remember you what they contain. You only have one
-restriction, yo can not use the exactly variable word twice or it may be
-overwritten.
+restriction, you can not use the exactly variable word twice or it may be
+overwritten -i.e., your variable will only contain the last magic spelled, the
+first one will be lost as Nemo.
 
 In R we can name our variables as we want, thus we can not start to name
 them with numbers, capitals or special characters. Special characters
 besides . or \_ are not recommended.
 
 ```{r}
-# First of all, as you can see this line gives no instruction to R. However, R doesn't yell at us. Why? Because its a comment, so R knows that this is only for us humans to read. In R we use the hash tag symbol before 
+# First of all, as you can see this line gives no instruction to R. However, R 
+#doesn't yell at us. Why? Because it's a comment, so R knows that this is only 
+#for us humans to read. In R we use the hash tag symbol to start a comment
 
 #lets make our first variable!
 
@@ -149,16 +152,17 @@ print(robotaren.agurra)# we are running our first command!
 
 ```
 
-You may not have noticed, but we run our first command! we asked the
+You may not have noticed, but we run our first command! We asked the
 computer to print within the console the string contained in
-"robotaren.agurra"
+"robotaren.agurra" **Mind Blown!** We've unlocked our first jedi trick!
 
 In R it's tradition (*it's the law*) that when we have multiple words to
 name a variable we use a dot to separate them. Also, we use the symbol
-*\<-* intead of =
+*\<-* intead of = . Do not worry if you do not do so, there is no intergalactic
+R police after all, but you can be object of nerdy disapproval looks *sigh*.
 
-We have already defined some variables with different data types. Do yo
-know which type? If you are like me and have the memory power of Dory
+We have already defined some variables with different data types. Do you
+know which type they are? If you are like me and have the memory power of Dory
 from finding Nemo, you will explore which data type you are working
 with. Luckily R developers have us covered
 
@@ -175,12 +179,12 @@ class(my.factor)
 ```
 
 During your statistical Jedi trip, you will encounter this type of
-elements most of the time. numeric and characters are kinda
+elements most of the time. Numeric and characters R classes are kinda
 self-explanatory, but
 
 -   **What is a factor?**
 
--   Im glad that you asked! Long story short, **I do not know**
+-   I'm glad that you asked! Long story short, **I do not know**
 
 Factors are this really weird R class type that helps us to
 differentiate between element types. Imagine you have a scroll with the
@@ -189,8 +193,8 @@ names of all the elves and orcs living as friends inside a village
 
 ![Happy village scroll](./img/scroll.jpg)
 
-OK, then in your scroll you have their names and their specie. In this
-example Specie would be a factor class. This is because its not a value
+OK, inside your scroll you have the villagers' names and their specie. In this
+example Specie would be a factor class. This is because it's not a value
 that we can change (sorta). An elf is an elf, despite of it's height,
 hair or being played by Orlando Bloom.
 
@@ -201,16 +205,16 @@ hair or being played by Orlando Bloom.
 ## Data structures
 
 My fellow padawan, I sense the R force is strong in you! You may be
-asking, "Ha, but what if I want many elements inside a variable?" We are
-going places here!
+asking, "Ha, but what if I want many elements inside a variable?" 
+We are going places here!
 
 OK, this kind of **structures** that hold data are called *data
 structures*. We have one great distinction, we may want structures
 containing the same data class or structures with different ones.
 
 Imagine now you want to store a lot of *healing* spells against fire,
-PhD burn-out, hangover and fantasy stuff like that (blink blink). We'll
-then you would use a stone that can store tons of healing spells
+PhD burn-out, hangover and fantasy stuff like that (blink blink). Well,
+then you need a stone that can store tons of healing spells
 (*homogeneous* if you want to sound nerdy).
 
 If you want, instead, to store different type of spells like *healing*,
@@ -242,8 +246,8 @@ my.vector=c(1,"2")
 
 Matrix further than being a matrix, they can be seen as several vectors
 tied together. This structure is bi-dimensional (**2D**). Kinda like if
-you make a boat by gluing wood logs. Thus, **every vector has to have
-the same length**
+you make a boat by gluing wood logs. Thus, every vector has to have
+the same length
 
 ```{r}
 first.log <- c("a","b","c","d")
@@ -252,7 +256,7 @@ my.logmatrix <- rbind(first.log,second.log)
 
 ```
 
-cool right! \*There'r another multidimentional homogeneous data
+Cool, right? \*There is another multi-dimentional homogeneous data
 structure called table or array (**n-dimensional**), but we are not
 going to speak about these #sorry!
 
@@ -264,17 +268,18 @@ List are 1 dimentional data structures (**1D**) like vectors, but we can
 have different data types within
 
 ```{r}
-my.list <- list(1,"2","3",4)
+my.list <- list(1,"2","3",4)# one way to create a list
 
 my.spellrock.list <- list(heal= "woosh",lives=2, mp.level=10,explosion=c("boom","kaboom"))
+#Another way with fancy indexes
 
-print(my.spellrock.list[1])
+print(my.spellrock.list[1])#print first element inside my list
 
-print(my.spellrock.list$explosion)
+print(my.spellrock.list$explosion)# let's see whats inside $explosion
 ```
 
 We did a lot here! As you can see, we can store different kind of class
-types inside our list. How cool is that (well, not so much TBH, but its
+types inside our list. How cool is that (well, not so much TBH, but it's
 useful).
 
 ![Explosion!](./img/Rlist.jpg)
@@ -290,21 +295,23 @@ structure let us access to complete rows, complete columns, a range
 given rows and columns and specific locations.
 
 The mystery of the R force sounds complicated. Let me show you. To
-understand this, imagine DataFrames to be as a Naval Battle board.
+understand this, imagine DataFrames to be as a Battleship board game.
 
 ```{r}
+# we will need some vector like notation
 a.column <- c(NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,"SH")
 b.column <- c(NaN,NaN,"S",NaN,NaN,NaN,NaN,NaN,NaN,"IP")
 c.column <- c(NaN,NaN,"H",NaN,NaN,"S","H","I","P",NaN)
 d.column <- c(NaN,NaN,"I",NaN,NaN,NaN,NaN,NaN,NaN,NaN)
 e.column <- c(NaN,NaN,"I",NaN,NaN,NaN,"SHIP",NaN,NaN,NaN)
 f.column <- c(NaN,NaN,"P",NaN,NaN,NaN,NaN,NaN,NaN,NaN)
+#we will join this vectors to make a data frame
 board.game.df <- data.frame(a.column,b.column,c.column,d.column,e.column,
                             f.column)
 print(board.game.df)
 ```
 
-Wuhuu! Now lets play
+Wuhuu! Now let's play
 
 ```{r}
 print(board.game.df[1,])#we can select the first row
@@ -315,7 +322,9 @@ print(board.game.df["a.column"])
 # or this
 print(board.game.df$a.column)
 
-print(board.game.df[3,2:6])# we can select a subselection
+#Test:what's the difference between board.game.df["a.column"] & board.game.df$a.column
+
+print(board.game.df[3,2:6])# we can select a sub-selection
 
 print(board.game.df[7,5])# we can select one single element
 
@@ -337,7 +346,7 @@ naval.turn <- function(dataFrame,y,x){
   if (dataFrame[y,x] != NaN)  #if whats inside my cell is different from NaN
     {print (dataFrame[y,x])# print whats inside
     print("Boom!")#change content to Boom!
-    return(NaN)} # nothing left
+    return(NaN)} # nothing left, In programming languages we say NaN
 
   else #if what is inside is a NaN
     {print("Ups, you failed")}#arise this print
@@ -350,21 +359,27 @@ and *while* . see below
 
 ```{r}
 #for syntax= for (element in elementcontainer){do condition}
-for (column in board.game.df) {
+for (column in board.game.df) { #for every column inside our data frame
   print("running this step")
-  print(column)
-print("changing step")
+  print(column) #print everything inside our current selected column
+print("changing step") #change to the next column
 }
+# as you can see, for loop lets us iterate around a fixed and predetermined
+# elements of a set (i.e., list, vectors, etc)
 ```
 
 ```{r}
 i=0
-  while (i<10) {
-    print(i)
+# we need to start with a predifined 1 value
+  while (i<10) { #while the value of is is less than ten
+    print(i) #print the value of i
     print("while loop goes BbBrR")
-    i=i+1
+    i=i+1 #sum one unity to the former value of i
   }
+#as you can see, while loops have the characteristic of staying in loop WHILE
+# the hault condition is not achieved
 print("while loop stops")
+
 ```
 
 ### GAME! turn everything inside board.game.df to NaNs
@@ -381,19 +396,18 @@ board.game.df[7,5] <- naval.turn(board.game.df,7,5)
 ![install.packages()](./img/coding.jpg)
 
 R is a programming language used by tons of people. As so, most of the
-times (*almost always*) we do not need to reinvent the wheel, because
+times (*almost always*) we do not need to reinvent the lightsaber, because
 somebody has already solved our goal and make it available though R
-packages. **What are packages** Well, think about it this way: You are
-an elf who wants a spell that let you eat as much cookies as you want
+packages. **What are packages** Well, think about it in this way: You are
+an elf who wants a spell that will let you eat as much cookies as you want
 without gaining weight. In this case you could write your own spell or
 search for a *grimoire* with the steps to cast your desire!
 
 In order for R to get a new grimoire you need to do two thing:
 
-1 - Install de package (*buy the grimoire*)
+1 - Install de package (*get the grimoire*)
 
-2 - Load the package into your working space (*open the grimoire and
-have it near hand in case you need it*)
+2 - Load the package into your working space (*open the grimoire and have it near hand in case you need it*)
 
 Now lets install a package!
 
@@ -405,8 +419,8 @@ install.packages("pacman")#This is the command to install a package, once it's i
 # As you can see from what you learned, install.packages() is a R core function!
 ```
 
-Great! we downloaded our first package, but where from? Well, it's
-downloaded from The Comprehensive R Archive Network(**CRAN** for R jedys
+Great! we downloaded our first package, but where from? *God, is it you?*
+Well, it's downloaded from The Comprehensive R Archive Network(**CRAN** for R jedys
 like yourself) <https://cran.r-project.org/>
 
 Now, let's load our package
@@ -457,8 +471,11 @@ excel.file <- readxl::read_xlsx("data/Exercise_excel.xlsx")
 ```
 
 If you put attention, you will look that our .csv and our .xlsx are data frames!
-This is basically what you are going to do while granted the Jedi knight badge. 
-While being a jedi knight you will load your data, sense the R force, make shinny 
+Thus, each column is make from a vector, so you can not have different type of
+R classes per column *remember this*.
+
+Data frames are basically what you are going to do while granted the Jedi knight badge. 
+during your time as a jedi knight you will load your data, sense the R force, make shinny 
 stats that no one will understand, an more. Thus, we can do this with any other
 programming language. We are here because R grants abilities some consider to be
 un-natural. **cool plots**
@@ -477,6 +494,15 @@ edit and overlap to make pretty cool plots.
 GGplot intro: https://ggplot2.tidyverse.org/articles/ggplot2.html
 GGplot cheatsheet: https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf
 Check how to change element_text: https://www.rdocumentation.org/packages/ggplot2/versions/2.1.0/topics/element_text
+
+
+The basics for Ggplot force trick are:
+
+1 You need a data frame
+2 Your data has to be long format-like (remember factors?)
+3 You have to determine which kind of plot you want (https://ggplot2.tidyverse.org/reference/index.html)
+4 You choose your amazing colors
+
 
 ```{r}
 
@@ -525,8 +551,14 @@ plot for each label and replace the label with the correct name of the image sho
 
 ------------------------------------------------------------------------
 
+------------------------------------------------------------------------
+
 ##### ref
 
 1 Matejka, J., & Fitzmaurice, G. (2017, May). Same stats, different graphs: generating datasets with varied appearance and identical statistics through simulated annealing. In Proceedings of the 2017 CHI conference on human factors in computing systems (pp. 1290-1294)
 
 2 Molin, S. (2023). stefmolin/data-morph: Data Morph (0.2.0). Zenodo. https://doi.org/10.5281/zenodo.8374121
+
+3 Crameri, F., Shephard, G. E., & Heron, P. J. (2020). The misuse of colour in science communication. Nature Communications, 11, 5444. https://doi.org/10.1038/s41467-020-19160-7
+
+4 Harrower, M., & Brewer, C. A. (2003). ColorBrewer.org: An Online Tool for Selecting Colour Schemes for Maps. The Cartographic Journal, 40(1), 27–37. https://doi.org/10.1179/000870403235002042
