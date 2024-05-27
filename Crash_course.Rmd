@@ -541,13 +541,18 @@ ggplot(csv.file, aes(x=x, y=y, shape=dataset, color=dataset)) +# use ggplot over
 # Exercise
 
 
+
 Now its your turn! Your goal is to open the file **numeric_peekaboo.csv**, make a 
 plot for each label and replace the label with the correct name of the image shown
+
 
 ```{r}
 #your amazing code and plots go here
 ```
 
+# Remember that internet is your best friend
+
+![Internet my love](./img/grogru.png)
 
 ------------------------------------------------------------------------
 
