@@ -1,5 +1,11 @@
 # BCBL-Pupillometry-Workshop
 
+
+![BCBL-Pupillometry-Workshop](https://github.com/marco7877/BCBL-Pupillometry-Workshop/blob/main/logo.png)
+
+---
+
+
 Hello BCBLians R-code padawans. All materials here are the ones we are going to use during the Pupilometry Workshop (20-31, May, 2024).
 
 The idea is that after this crash course we have the required R notions to become a **R Jedi-Master**. This Repo is full of memes and jokes, *padawan discretion is adviced*
