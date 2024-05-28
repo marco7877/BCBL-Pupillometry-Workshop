@@ -12,7 +12,7 @@ The idea is that after this crash course we have the required R notions to becom
 
 ## R & R-Studio
 
-For this workshop we're going to work with the *R programming language* version ==$>=4.0$== (*Imagine each R version is a specific R pokemon evolution*. So, please make sure that you have it already installed; if not, access this https://cran.rstudio.com/ . 
+For this workshop we're going to work with the *R programming language* version $>=4.0$ (*Imagine each R version is a specific R pokemon evolution*. So, please make sure that you have it already installed; if not, access this https://cran.rstudio.com/ . 
 
 We will also use an *Integrated Development Environment* (**IDE** for cool people) so that we can code with a nice Grafical User Interface (**GUI**). We will use R-studio https://posit.co/download/rstudio-desktop/#download
 
